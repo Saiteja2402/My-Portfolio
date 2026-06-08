@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b1120;
+    color:#fff;
+    line-height:1.7;
+}
+
+html{
+    scroll-padding-top:80px;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(11,17,32,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:1.8rem;
+    font-weight:700;
+    background:linear-gradient(90deg,#7c3aed,#06b6d4);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.navbar ul{
+    display:flex;
+    gap:20px;
+    list-style:none;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+}
+
+.navbar a:hover{
+    color:#06b6d4;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:5rem;
+    background:linear-gradient(90deg,#7c3aed,#06b6d4);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero h2{
+    color:#94a3b8;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#cbd5e1;
+    max-width:700px;
+    margin:auto;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 28px;
+    border-radius:30px;
+    background:linear-gradient(90deg,#7c3aed,#06b6d4);
+    color:white;
+    text-decoration:none;
+}
+
+/* SECTIONS */
+
+.section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:2.3rem;
+}
+
+/* CARDS */
+
+.card,
+.contact-card{
+    background:#111827;
+    border:1px solid #1f2937;
+    border-radius:20px;
+    padding:30px;
+    transition:.3s;
+}
+
+.card:hover,
+.contact-card:hover{
+    transform:translateY(-10px);
+    border-color:#06b6d4;
+    box-shadow:0 20px 40px rgba(6,182,212,.15);
+}
+
+/* GRIDS */
+
+.skills-grid,
+.project-grid,
+.cert-grid,
+.contact-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+/* CONTACT */
+
+.contact-card{
+    text-align:center;
+    text-decoration:none;
+    color:white;
+}
+
+.contact-icon{
+    font-size:2rem;
+    margin-bottom:15px;
+    color:#06b6d4;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#94a3b8;
+    border-top:1px solid #1f2937;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .navbar ul{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero h2{
+        font-size:1rem;
+    }
+
+    .section{
+        padding:70px 5%;
+    }
+}
